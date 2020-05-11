@@ -18,6 +18,9 @@ class DjangoSummernoteConfig(AppConfig):
 
     def get_default_config(self):
         return {
+            # Add domain address in Attachments url
+            'site_address': '',
+            
             # Using SummernoteWidget(iframe widget) for admin pages by default
             'iframe': True,
 
