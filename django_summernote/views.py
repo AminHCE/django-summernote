@@ -152,7 +152,7 @@ class SummernoteUploadAttachment(UserPassesTestMixin, View):
                 attachments.append(attachment)
 
             return HttpResponse(render_to_string('django_summernote/upload_attachment.json', {
-                'attachments': attachments,
+                'attachments': attachments, 'site_address': config['site_address'],
             }), content_type='application/json')
         except IOError:
             return JsonResponse({
